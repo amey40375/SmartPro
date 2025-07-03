@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(222, 84%, 4.9%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(215.4, 16.3%, 46.9%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(222, 84%, 4.9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(222, 84%, 4.9%);
+  --border: hsl(214.3, 31.8%, 91.4%);
+  --input: hsl(214.3, 31.8%, 91.4%);
+  --primary: hsl(224, 76%, 48%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(214, 100%, 97%);
+  --secondary-foreground: hsl(224, 76%, 48%);
+  --accent: hsl(43, 96%, 56%);
+  --accent-foreground: hsl(224, 76%, 48%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(222, 84%, 4.9%);
+  --radius: 0.5rem;
+  
+  /* SmartPro Custom Colors */
+  --navy-50: hsl(214, 100%, 97%);
+  --navy-100: hsl(214, 95%, 93%);
+  --navy-200: hsl(213, 97%, 87%);
+  --navy-300: hsl(212, 96%, 78%);
+  --navy-400: hsl(213, 94%, 68%);
+  --navy-500: hsl(217, 91%, 60%);
+  --navy-600: hsl(221, 83%, 53%);
+  --navy-700: hsl(224, 76%, 48%);
+  --navy-800: hsl(226, 71%, 40%);
+  --navy-900: hsl(224, 64%, 33%);
+  
+  --gold-50: hsl(48, 100%, 96%);
+  --gold-100: hsl(48, 96%, 89%);
+  --gold-200: hsl(48, 97%, 77%);
+  --gold-300: hsl(46, 97%, 65%);
+  --gold-400: hsl(43, 96%, 56%);
+  --gold-500: hsl(38, 92%, 50%);
+  --gold-600: hsl(32, 95%, 44%);
+  --gold-700: hsl(26, 90%, 37%);
+  --gold-800: hsl(23, 83%, 31%);
+  --gold-900: hsl(22, 78%, 26%);
+}
+
+.dark {
+  --background: hsl(222, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217.2, 32.6%, 17.5%);
+  --muted-foreground: hsl(215, 20.2%, 65.1%);
+  --popover: hsl(222, 84%, 4.9%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --card: hsl(222, 84%, 4.9%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217.2, 32.6%, 17.5%);
+  --input: hsl(217.2, 32.6%, 17.5%);
+  --primary: hsl(210, 40%, 98%);
+  --primary-foreground: hsl(222, 47%, 11%);
+  --secondary: hsl(217.2, 32.6%, 17.5%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(217.2, 32.6%, 17.5%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(212.7, 26.8%, 83.9%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+  }
+}
+
+@layer utilities {
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .loading-spinner {
+    animation: spin 1s linear infinite;
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  .slide-in {
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  /* Professional Modern Effects */
+  .gradient-navy {
+    background: linear-gradient(135deg, hsl(224, 76%, 48%) 0%, hsl(226, 71%, 40%) 100%);
+  }
+  
+  .gradient-gold {
+    background: linear-gradient(135deg, hsl(43, 96%, 56%) 0%, hsl(38, 92%, 50%) 100%);
+  }
+  
+  .glass-effect {
+    backdrop-filter: blur(16px) saturate(180%);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+  
+  .card-hover {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  }
+  
+  .professional-shadow {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .floating-card {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(16px);
+  }
+  
+  .premium-gradient {
+    background: linear-gradient(135deg, 
+      hsl(224, 76%, 48%) 0%, 
+      hsl(217, 91%, 60%) 50%, 
+      hsl(43, 96%, 56%) 100%
+    );
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(224, 76%, 48%), hsl(43, 96%, 56%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
